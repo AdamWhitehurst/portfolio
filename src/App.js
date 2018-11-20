@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Sectional from './components/sectional';
 
 class App extends Component {
+  renderSectionals () {
+    let sectionals = [];
+    for (let i = 0; i < 10; i++) 
+    sectionals.push (<Sectional className="sectional"/>);
+    return sectionals;
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <div className="main">
+        <header className="header">
+          <p>I AM A WIP AND I AM UGLY</p>
         </header>
+        <div className="carasoul">
+          <p>ONE DAY I WILL SPIN FOR I AM THE CARASOUL</p>
+        </div>
+        <div className="content">
+        {this.renderSectionals()}
+        </div>
       </div>
     );
   }
