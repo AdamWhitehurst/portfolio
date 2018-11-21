@@ -18,11 +18,18 @@ p {
   color: white;
 }
 
-.carasoul {
+.carasoul-container {
   flex: 4;
   background-color: gold;
 }
 
+.carasoul {
+  flex:1,
+}
+
+.carsoul-item {
+  height: 30vh;
+}
 .content {
   flex: 10;
   display: flex;
