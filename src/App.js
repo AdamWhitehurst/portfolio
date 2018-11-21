@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import './App.css';
 import Sectional from './components/sectional';
-import { SimpleSlider } from './components/simple_slider';
+import { Carasoul, CarasoulItem } from './components/carasoul';
+import {carasoulItems} from './constants/values';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(
+  faEnvelope,
+  faKey,
+  fab);
+
 
 class App extends Component {
   renderCarasoulItems() {
     let items = [];
-    for (let i = 0; i < 10; i++) {
+    for (let key in carasoulItems) {
+      console.log(key);
       items.push (
-      <div key={i} className="carasoul-item">
-        <p>HI</p>
-      </div>
+      <CarasoulItem key={key} item={carasoulItems[key]}/>
       );
     }
     return items;
@@ -28,9 +36,9 @@ class App extends Component {
           <h2>Adam Whitehur.st</h2>
         </header>
         <div className="carasoul-container">
-          <SimpleSlider className="carasoul">
+          <Carasoul className="carasoul">
           {this.renderCarasoulItems()}
-          </SimpleSlider>
+          </Carasoul>
         </div>
         <div className="content">
         {this.renderSectionals()}
