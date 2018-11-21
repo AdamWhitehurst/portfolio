@@ -6,12 +6,13 @@ import { SimpleSlider } from './components/simple_slider';
 class App extends Component {
   renderCarasoulItems() {
     let items = [];
-    for (let i = 0; i < 10; i++) 
-    items.push (
-    <div key={i} className="carasoul-item">
-      <p>HI</p>
-    </div>
-    );
+    for (let i = 0; i < 10; i++) {
+      items.push (
+      <div key={i} className="carasoul-item">
+        <p>HI</p>
+      </div>
+      );
+    }
     return items;
   }
   renderSectionals () {
