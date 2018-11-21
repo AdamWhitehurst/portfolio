@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <div className="main">
         <header className="header">
-          <p>I AM A WIP AND I AM UGLY</p>
+          <h2>Adam Whitehur.st</h2>
         </header>
         <div className="carasoul-container">
           <SimpleSlider className="carasoul">
