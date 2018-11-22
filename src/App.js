@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import Sectional from './components/sectional';
 import { Carasoul, CarasoulItem } from './components/carasoul';
 import {carasoulItems} from './constants/values';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { Nav } from './components/basic';
+
 library.add(
   faEnvelope,
   faKey,
@@ -26,7 +27,7 @@ class App extends Component {
   renderSectionals () {
     let sectionals = [];
     for (let i = 0; i < 10; i++) 
-    sectionals.push (<Sectional key={i} className="sectional"/>);
+    sectionals.push (<Nav key={i}></Nav>);
     return sectionals;
   }
   render() {
