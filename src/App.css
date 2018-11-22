@@ -1,40 +1,48 @@
-p {
-  font-size: calc(10px + 2vmin);
-}
 .main {
 
   display: flex;
+  flex:1;
   flex-direction: column;
   text-align: center;
+  padding-top: 3.5em;
+  padding-bottom: 1.75em;
   background-color: #282C34;
 }
 
 .header {
-  float: left;
-  flex: 1;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: baseline;
   justify-content: flex-start;
   align-content: flex-start;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.5em;
   color: white;
+  z-index: 99;
+  vertical-align: text-bottom;
 }
 
 .header h2 {
-  flex: 1;
-  line-height: 100%;
+  width: 100%;
+  height: 0%;
+  line-height: 80%;
   font-family: 'Damion', cursive;
   font-weight: 100;
-  font-size: 3rem;
+  font-size: 3em;
+  padding-left: 1vw;
   text-align: left;
   align-self: flex-end;
   margin: 0; 
+  -webkit-text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
+  -moz-text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
+  text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
 }
 
 .carasoul-container {
   flex: 4;
-  background-color: gold;
 }
 
 .carasoul {
@@ -42,13 +50,37 @@ p {
 }
 
 .carasoul-item {
+  flex:1;
+  height:10px;
+  background-color: red;
+}
+
+.nav {
   flex: 1;
+  min-width: 10em;
+  min-height: 10em;
+  margin: 1vw;
+  border-radius: 2vw;
+  padding: 1vw;
+  background-color: green; 
+  -webkit-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.29);
+  -moz-box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.29);
+  box-shadow: 0px 5px 10px 1px rgba(0,0,0,0.29);
 }
 .carasoul-item a {
+  flex:1;
   color: white;
+  -webkit-text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
+  -moz-text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
+  text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
+  
 }
-.carasoul-item FontAwesomeIcon {
-  color: white;
+.carasoul-icon {
+  flex:1;
+  height: fit-content;
+  -webkit-text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
+  -moz-text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
+  text-shadow: 0px 5px 1px rgba(0,0,0,0.29);
 }
 .content {
   flex: 10;
