@@ -1,40 +1,57 @@
 import React, { Component } from 'react';
-import './App.css';
-import Sectional from './components/sectional';
-import { SimpleSlider } from './components/simple_slider';
+import {Container, Content, ContentSecondary} from './components/basics';
+import { Header } from './components/header';
+import { Carasoul } from './components/carasoul';
 
 class App extends Component {
   renderCarasoulItems() {
     let items = [];
     for (let i = 0; i < 10; i++) 
     items.push (
-    <div key={i} className="carasoul-item">
-      <p>HI</p>
-    </div>
+
     );
     return items;
   }
+
   renderSectionals () {
     let sectionals = [];
     for (let i = 0; i < 10; i++) 
-    sectionals.push (<Sectional key={i} className="sectional"/>);
+    sectionals.push (
+
+    );
     return sectionals;
   }
+
   render() {
     return (
-      <div className="main"> 
-        <header className="header">
-          <h2>Adam Whitehur.st</h2>
-        </header>
-        <div className="carasoul-container">
-          <SimpleSlider className="carasoul">
-          {this.renderCarasoulItems()}
-          </SimpleSlider>
-        </div>
-        <div className="content">
-        {this.renderSectionals()}
-        </div>
-      </div>
+      <Container>
+        <Header/>
+        <Carasoul/>
+        <Content>
+          <p>2</p>
+        </Content>
+        <ContentSecondary>
+          <p>3</p>
+        </ContentSecondary>
+        <Content>
+          <p>4</p>
+        </Content>
+        <ContentSecondary>
+          <p>5</p>
+        </ContentSecondary>
+        <Content>
+          <p>6</p>
+        </Content>
+        <ContentSecondary>
+          <p>7</p>
+        </ContentSecondary>
+        <Content>
+          <p>8</p>
+        </Content>
+        <ContentSecondary>
+          <p>9</p>
+        </ContentSecondary>
+      </Container>
     );
   }
 }

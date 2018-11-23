@@ -1,0 +1,1 @@
+export const Title = 'Adam Whitehur.st';
