@@ -11,14 +11,14 @@ export const Theme = {
 
   textDark: '#020009',
   textLight: '#ECE9F9',
-  titleFontStyle: 'Damion',
-  contentFontStyle: 'Caveat',
+  titleFontFamily: 'Damion',
+  contentFontFamily: 'Caveat',
   h2FontSize: '4em',
 
   borderRadius: '.75rem',
-  outBoxShadow: '0px 5px 8px 1px rgba(7,1,28,0.5)',
+  outBoxShadow: '0px 1px 5px 1px rgba(7,1,28,0.5)',
   inBoxShadow: 'inset 0px 2px 3px 1px rgba(7,1,28,0.25)',
-  outTextShadow: '0px 5px 2px rgba(7,1,28,0.5)',
+  outTextShadow: '0px 1px 2px rgba(7,1,28,0.5)',
 
   padding: '0.5rem',
   margin: '0.5rem',

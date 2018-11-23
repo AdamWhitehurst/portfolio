@@ -18,7 +18,8 @@ const style = (Theme) => ({
     lineHeight: '80%',
     verticalAlign: 'baseline',
     color: Theme.textLight,
-    fontStyle: Theme.titleFontStyle,
+    fontWeight: '100',
+    fontFamily: Theme.titleFontFamily,
     textShadow: Theme.outTextShadow,
 
     // backgroundColor: 'red',
