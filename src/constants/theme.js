@@ -30,17 +30,15 @@ export const BasicContainer = {
   display: 'flex',
   flex: 1,
   flexDirection: 'column',
-  minHeight: '100vh',
-  minWidth: '100vw',
   boxSizing: 'border-box',
   backgroundColor: Theme.bgDark,
-  padding: Theme.padding,
 };
 
 export const BasicContent = {
+  display: 'flex',
   flex: 1,
-  minHeight: '10rem',
-  minWidth: '10rem',
+  minHeight: '5rem',
+  minWidth: '5rem',
   backgroundColor: Theme.colorAccentDark,
   borderRadius: Theme.borderRadius,
   padding: Theme.paddingSmall,
