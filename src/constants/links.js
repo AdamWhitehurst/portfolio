@@ -1,19 +1,30 @@
-export const Links = {
-  Github: {
+export const Links = [
+  {
+    url: "https://www.linkedin.com/in/adam-whitehurst-970504b0/",
+    icon: "linkedin-in",
+  },
+  {
+    url: "https://steamcommunity.com/profiles/76561198121157048/myworkshopfiles/",
+    icon: "steam-symbol",
+  },
+  {
+    url: "https://www.facebook.com/WittyHorse",
+    icon: "facebook-f",
+  },
+  {
+    url: "https://twitter.com/AdamBrohurst",
+    icon: "twitter",
+  },
+  {
+    url: "https://www.instagram.com/witty.horse/",
+    icon: 'instagram',
+  },
+  {
+    url: "https://gitlab.com/AdamWhitehurst",
+    icon: 'gitlab',
+  },
+  {
     url: "https://github.com/AdamWhitehurst",
     icon: "github-alt",
   },
-  LinkedIn: {
-    url: "https://www.linkedin.com/in/adam-whitehurst-970504b0/",
-    icon: "linkedin-in"
-  },
-  Facebook: {
-    url: "https://www.facebook.com/WittyHorse",
-    icon: "facebook-f"
-  },
-  "Steam Workshop": {
-    url:
-      "https://steamcommunity.com/profiles/76561198121157048/myworkshopfiles/",
-    icon: "steam-symbol"
-  }
-};
+];

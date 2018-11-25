@@ -87,7 +87,7 @@ class UnstyledCarasoul extends React.Component {
     let items = [];
     for (let link in Links) {
       items.push (
-        <CarasoulItem key={link} {...Links[link]}/>
+        <CarasoulItem key={Links.indexOf(link)} {...Links[link]}/>
       );
     } 
     return items;

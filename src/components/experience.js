@@ -1,5 +1,5 @@
 import React from 'react'
-import { ExperienceText } from '../constants/constants';
+import { ExperienceText } from '../constants/texts';
 import injectSheet from 'react-jss';
 
 const style = (Theme) => ({
@@ -7,10 +7,12 @@ const style = (Theme) => ({
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
+    color: Theme.textLight,
+    fontFamily: Theme.contentFontFamily,
   },
   title: {
-    width: '100%',
-    paddingRight: '0.25em',
+    width: '98%',
+    paddingRight: '1em',
     textAlign: 'end',
     fontFamily: Theme.titleFontFamily,
     fontWeight: '100',
@@ -20,7 +22,9 @@ const style = (Theme) => ({
     borderBottomRightRadius: '8%',
     boxShadow: Theme.outBorderShadow,
   },
-  content: {},
+  content: {
+    padding: '1em',
+  },
   sectionContainer: {
     marginBottom: '1rem',
     paddingBottom: '0.25rem',
@@ -60,6 +64,7 @@ const style = (Theme) => ({
   sectionBody: {
     width: '100%',
     fontSize: '0.9em',
+    padding: '1em',
   },
   sectionTags: {
     fontSize: '0.6em',

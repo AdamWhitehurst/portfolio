@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { App } from './App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from 'theming';
-import {Theme} from './constants/theme';
+import { Theme } from './constants/theme';
 
 ReactDOM.render(
   <ThemeProvider theme={Theme}>

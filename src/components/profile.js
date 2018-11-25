@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProfileText } from '../constants/constants';
+import { ProfileText } from '../constants/texts';
 import injectSheet from 'react-jss';
 
 const style = (Theme) => ({
@@ -7,10 +7,12 @@ const style = (Theme) => ({
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
+    color: Theme.textLight,
+    fontFamily: Theme.contentFontFamily,
   },
   title: {
-    width: '100%',
-    paddingRight: '0.25em',
+    width: '98%',
+    paddingRight: '1em',
     fontSize: '1.9em',
     fontFamily: Theme.titleFontFamily,
     fontWeight: '100',
