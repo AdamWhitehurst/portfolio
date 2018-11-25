@@ -12,8 +12,8 @@ export const Theme = {
   textDark: '#020009',
   textLight: '#ECE9F9',
   titleFontFamily: 'Damion',
-  contentFontFamily: 'Caveat',
-  h2FontSize: '4em',
+  contentFontFamily: 'Montserrat',
+  titleFontSize: '4.25em',
 
   borderRadius: '.75rem',
   outBoxShadow: '0px 1px 5px 1px rgba(7,1,28,0.5)',
@@ -25,31 +25,3 @@ export const Theme = {
   paddingSmall: '0.25rem',
   marginSmall: '0.25rem',
 };
-
-export const BasicContainer = {
-  display: 'flex',
-  flex: 1,
-  flexDirection: 'column',
-  boxSizing: 'border-box',
-  backgroundColor: Theme.bgDark,
-};
-
-export const BasicContent = {
-  display: 'flex',
-  flex: 1,
-  minHeight: '5rem',
-  minWidth: '5rem',
-  backgroundColor: Theme.colorAccentDark,
-  borderRadius: Theme.borderRadius,
-  padding: Theme.paddingSmall,
-  margin: Theme.margin,
-  color: Theme.textDark,
-  boxShadow: Theme.outBoxShadow,
-
-};
-export const BasicContentSecondary = {
-  backgroundColor: Theme.colorPrimaryDark,
-  boxShadow: Theme.inBoxShadow,
-};
-
-export const HeaderHeight = '2rem';

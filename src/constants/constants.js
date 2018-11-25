@@ -1,1 +1,1 @@
-export const Title = 'Adam Whitehur.st';
+export const TitleText = 'Adam Whitehur.st';

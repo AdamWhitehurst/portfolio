@@ -1,16 +1,16 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import Slider from "react-slick";
-import { BasicContent, BasicContainer } from '../constants/theme';
-import { Content } from './basics';
+import { ContentSecondary } from './basics';
 import { Links } from '../constants/links';
 
 const style = (Theme) => ({
   carasoul: {
-    ...BasicContainer,
-    //backgroundColor: 'red',
-    marginTop: '1.4rem',
-    flex: props => props.flex || 1, 
+    flex: props => props.flex,
+    marginTop: Theme.titleFontSize,
+    boxSizing: 'border-box',
+    backgroundColor: Theme.bgDark,
+    fontFamily: Theme.titleFontFamily,
   },
 });
 
@@ -28,19 +28,25 @@ const settings = {
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 640,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 360,
+      settings: {
+        slidesToShow: 1,
       }
     },
   ]
@@ -71,9 +77,9 @@ class UnstyledCarasoul extends React.Component {
 export const Carasoul = injectSheet(style)(UnstyledCarasoul);
 
 const UnstyledCarasoulItem = ({classes, children}) => (
-  <Content className={classes.carasoulItem}>
+  <ContentSecondary className={classes.carasoulItem}>
     {children}
-  </Content>
+  </ContentSecondary>
 );
 
 const CarasoulItem = injectSheet(style)(UnstyledCarasoulItem);
