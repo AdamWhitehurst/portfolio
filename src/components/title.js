@@ -21,13 +21,17 @@ const style = (Theme) => ({
   },
   header: {
     extend: 'basicHeader',
-    width: '100%',
     fontSize: Theme.titleFontSize,
+    lineHeight: '80%',
     position: 'fixed',
     left: 0,
     margin: 0,
-    paddingLeft: Theme.padding,
-    marginLeft: Theme.margin,
+    paddingRight: `calc(3.5 * ${Theme.padding})`,
+    marginLeft: `calc(4 * ${Theme.margin})`,
+    borderBottom: `0.25rem solid ${Theme.textLight}`,
+    borderRadius: '25%',
+    borderBottomLeftRadius: '8%',
+    boxShadow: Theme.outBorderShadow,
   }
 });
 

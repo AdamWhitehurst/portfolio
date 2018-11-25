@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container} from './components/basics';
+import {Container, Content} from './components/basics';
 import { Title } from './components/title';
 import { Carasoul } from './components/carasoul';
 import Profile from './components/profile';
@@ -10,9 +10,13 @@ class App extends React.Component {
     return (
       <Container>
         <Title />
-        <Carasoul flex={2}/>
-        <Profile/>
-        <Profile/>
+        <Carasoul/>
+        <Content flexDirection='row'>
+          <Profile/>
+          <Profile/>
+          <Profile/>
+          <Profile/>
+        </Content>
       </Container>
     );
   }

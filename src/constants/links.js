@@ -1,7 +1,7 @@
 export const Links = {
   Github: {
     url: "https://github.com/AdamWhitehurst",
-    icon: "github-alt"
+    icon: "github-alt",
   },
   LinkedIn: {
     url: "https://www.linkedin.com/in/adam-whitehurst-970504b0/",
