@@ -1,5 +1,4 @@
 import React from 'react'
-import { Content } from './basics';
 import { ProfileText } from '../constants/constants';
 import injectSheet from 'react-jss';
 
