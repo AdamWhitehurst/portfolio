@@ -4,7 +4,7 @@ import injectSheet from 'react-jss';
 const style = (Theme) => ({
   container: {
     display: 'flex',
-    flexFlow: 'column wrap',
+    flexDirection: 'column',
     backgroundColor: Theme.bgDark,
     fontFamily: Theme.titleFontFamily,
   },
@@ -24,16 +24,6 @@ const style = (Theme) => ({
     textAlign: 'justify',
     textJustify: 'inter-word',
   },
-  contentSecondary: {
-    extend: 'content',
-    backgroundColor: Theme.colorPrimaryDark,
-    boxShadow: Theme.outBoxShadow,
-  },
-  contentTertiary: {
-    extend: 'content',
-    backgroundColor: Theme.colorAccentLight,
-    boxShadow: Theme.inBoxShadow,
-  }
 });
 
 
@@ -50,17 +40,3 @@ const UnstyledContent = ({classes, children}) => (
   </div>
 )
 export const Content = injectSheet(style)(UnstyledContent);
-
-const UnstyledContentSecondary = ({classes, children}) => (
-  <div className={classes.contentSecondary}>
-    {children}
-  </div>
-)
-export const ContentSecondary = injectSheet(style)(UnstyledContentSecondary);
-
-const UnstyledContentTertiary = ({classes, children}) => (
-  <div className={classes.contentTertiary}>
-    {children}
-  </div>
-)
-export const ContentTertiary = injectSheet(style)(UnstyledContentTertiary);
