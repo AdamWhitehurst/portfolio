@@ -33,7 +33,7 @@ export const ExperienceText = {
         `Prepared reports for management using Powerpoint and Excel`,
         `Professional work environment`,
       ],
-      Tags: `CONFLUENCE, WATERFALL DEVELOPMENT, PROFESSIONAL EXPERIENCE, SQL`,
+      Tags: `CONFLUENCE, WATERFALL DEVELOPMENT, PROFESSIONAL ENVIRONMENT, SQL`,
     },
   ]
 };
