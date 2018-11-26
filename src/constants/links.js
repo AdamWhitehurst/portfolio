@@ -1,3 +1,5 @@
+  // Last object is first in LtR order when carasoul centerMode is true
+
 export const Links = [
   {
     url: "https://www.linkedin.com/in/adam-whitehurst-970504b0/",
@@ -22,6 +24,10 @@ export const Links = [
   {
     url: "https://gitlab.com/AdamWhitehurst",
     icon: 'gitlab',
+  },
+  {
+    url: "https://medium.com/@adamwhitehurst",
+    icon: 'medium-m',
   },
   {
     url: "https://github.com/AdamWhitehurst",
