@@ -21,22 +21,29 @@ const style = (Theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    alignContent: 'center',
     // backgroundColor: 'red',
-    transition: [{
-      property: 'opacity',
-      duration: '200ms'
-    }],
     padding: '3em',
     margin: Theme.margin,
-    '&:hover': {
-      opacity: '0.1',
-    }
   },
   carasoulIconLink: {
   },
   carasoulIcon: {
-    color: Theme.textLight,
+    color: Theme.colorPrimaryLight,
     filter: `drop-shadow(${Theme.outTextShadow})`,
+    margin: Theme.margin,
+    transition: [
+      {
+      property: 'opacity',
+      duration: '200ms'
+    },
+    {
+      property: 'color',
+      duration: '200ms'
+    }],
+    '&:hover': {
+      color: Theme.textLight,
+    }
   }
 });
 
