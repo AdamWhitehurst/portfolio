@@ -41,10 +41,12 @@ class UnstyledApp extends React.Component {
         <div className={classes.content}>
           <Profile/>
           <Experience/>
+          {/*
           // TODO: Projects <br/>
           // TODO: Education <br/>
           // TODO: Awards <br/>
           // TODO: Contact <br/>
+          */}
         </div>
       </div>
     );
