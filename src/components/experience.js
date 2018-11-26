@@ -75,7 +75,7 @@ class UnstyledExperience extends React.Component {
   render() {
     const {classes} = this.props;
     return (
-      <div className={classes.container} alignItems='flex-start'>
+      <div className={classes.container}>
         <h1 className={classes.title}>{ExperienceText.Title}</h1>
         <div className={classes.content}>
           {this.renderSections()}
