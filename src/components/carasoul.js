@@ -22,9 +22,15 @@ const style = (Theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     // backgroundColor: 'red',
-    minHeight: '100%',
-    padding: '10%',
+    transition: [{
+      property: 'opacity',
+      duration: '200ms'
+    }],
+    padding: '3em',
     margin: Theme.margin,
+    '&:hover': {
+      opacity: '0.1',
+    }
   },
   carasoulIconLink: {
   },
@@ -37,7 +43,7 @@ const style = (Theme) => ({
 const settings = {
   dots: false,
   arrows: false,
-  slidesToShow: 3,
+  slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
@@ -47,38 +53,32 @@ const settings = {
   infinite: true,
   centerMode: true,
   centerPadding: '10%',
-  // responsive: [
-  //   {
-  //     breakpoint: 1440,
-  //     settings: {
-  //       slidesToShow: 4,
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 1024,
-  //     settings: {
-  //       slidesToShow: 4,
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 640,
-  //     settings: {
-  //       slidesToShow: 3,
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 480,
-  //     settings: {
-  //       slidesToShow: 2,
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 360,
-  //     settings: {
-  //       slidesToShow: 1,
-  //     }
-  //   },
-  // ]
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 640,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+  ],
 }
 
 class UnstyledCarasoul extends React.Component {
