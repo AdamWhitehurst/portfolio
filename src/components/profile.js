@@ -4,7 +4,7 @@ import injectSheet from 'react-jss';
 
 const style = (Theme) => ({
   container: {
-    width: '100%',
+    flex: 3,
     display: 'flex',
     flexDirection: 'column',
     color: Theme.textLight,
@@ -13,19 +13,24 @@ const style = (Theme) => ({
   title: {
     width: '98%',
     color: Theme.colorPrimaryLight,
-    paddingRight: '1em',
+    paddingLeft: '0.5em',
+    textAlign: 'start',
     fontSize: '1.9em',
     fontFamily: Theme.titleFontFamily,
     fontWeight: '100',
     lineHeight: '85%',
     borderBottom: `0.06em solid ${Theme.colorPrimaryLight}`,
-    borderRadius: '25%',
-    borderBottomRightRadius: '8%',
+    borderBottomLeftRadius: '8%',
     boxShadow: Theme.outBorderShadow,
-    textAlign: 'end',
   },
   body: {
-    padding: '1.2em',
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    paddingRight: '1em',
   }
 });
 
@@ -36,7 +41,7 @@ class UnstyledProfile extends React.Component {
     return (
       <div className={classes.container}>
         <h2 className={classes.title}>{ProfileText.Title}</h2>
-        <div className={classes.body}> {ProfileText.Body}</div>
+        <div className={classes.body}><p>{ProfileText.Body}</p></div>
       </div>
     )
   }
