@@ -8,13 +8,10 @@ import {fab} from '@fortawesome/free-brands-svg-icons';
 import {library} from '@fortawesome/fontawesome-svg-core';
 library.add(fab);
 
-const style = (Theme) => ({
+const style = (theme) => ({
   carasoul: {
     flex: props => props.flex,
-    marginTop: Theme.titleFontSize,
-    paddingTop: Theme.padding,
-    fontFamily: Theme.titleFontFamily,
-    // backgroundColor: 'yellow',
+    fontFamily: theme.titleFontFamily,
   },
   carasoulItem: {
     flex: '1',
@@ -22,16 +19,15 @@ const style = (Theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
-    // backgroundColor: 'red',
-    padding: '3em',
-    margin: Theme.margin,
+    padding: '1.5em',
+    margin: theme.margin,
   },
   carasoulIconLink: {
   },
   carasoulIcon: {
-    color: Theme.colorPrimaryLight,
-    filter: `drop-shadow(${Theme.outTextShadow})`,
-    margin: Theme.margin,
+    color: theme.colorPrimaryLight,
+    filter: `drop-shadow(${theme.outTextShadow})`,
+    margin: theme.margin,
     transition: [
       {
       property: 'opacity',
@@ -42,7 +38,7 @@ const style = (Theme) => ({
       duration: '200ms'
     }],
     '&:hover': {
-      color: Theme.textLight,
+      color: theme.textLight,
     }
   }
 });
