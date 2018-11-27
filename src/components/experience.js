@@ -1,27 +1,27 @@
-import React from 'react'
-import { ExperienceText } from '../constants/texts';
+import React from 'react';
 import injectSheet from 'react-jss';
+import {ExperienceText} from '../constants/texts';
 
-const style = (Theme) => ({
+const styles = (theme) => ({
   container: {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    color: Theme.textLight,
-    fontFamily: Theme.contentFontFamily,
+    color: theme.textLight,
+    fontFamily: theme.contentFontFamily,
   },
   title: {
     width: '98%',
-    paddingRight: '1em',
-    textAlign: 'end',
-    fontFamily: Theme.titleFontFamily,
+    paddingLeft: '0.5em',
+    textAlign: 'start',
+    fontFamily: theme.titleFontFamily,
     fontWeight: '100',
     lineHeight: '85%',
-    color: Theme.colorPrimaryLight,
-    borderBottom: `0.06em solid ${Theme.colorPrimaryLight}`,
-    borderRadius: '25%',
-    borderBottomRightRadius: '8%',
-    boxShadow: Theme.outBorderShadow,
+    color: theme.colorPrimaryLight,
+    borderBottom: `0.06em solid ${theme.colorPrimaryLight}`,
+    borderRadius: '10%',
+    borderBottomRightRadius: '5%',
+    boxShadow: theme.outBorderShadow,
   },
   content: {
     padding: '1em',
@@ -34,10 +34,10 @@ const style = (Theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    borderBottom: `0.05em solid ${Theme.textLight}`,
+    borderBottom: `0.05em solid ${theme.textLight}`,
     borderBottomRightRadius: '1%',
     borderBottomLeftRadius: '1%',
-    boxShadow: Theme.outBorderShadow,
+    boxShadow: theme.outBorderShadow,
   },
   sectionLeftTitle: {
     margin: 0,
@@ -48,7 +48,7 @@ const style = (Theme) => ({
   },
   sectionTitle: {
     margin: 0,
-    fontFamily: Theme.titleFontFamily,
+    fontFamily: theme.titleFontFamily,
     fontSize: '1.2em',
     fontWeight: '100',
     fontStyle: 'normal',
@@ -70,49 +70,51 @@ const style = (Theme) => ({
   sectionTags: {
     fontSize: '0.6em',
   },
+  educationContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
 });
 
-class UnstyledExperience extends React.Component {
-  render() {
-    const {classes} = this.props;
+const UnstyledExperienceSection = (props) => {
+  const {section, classes} = props;
+  return (
+    <div className={classes.sectionContainer}>
+    <div className={classes.sectionLeftTitle}>
+      <div className={classes.sectionSubtitle}>{section.Subtitle}</div>
+      <div className={classes.sectionDate}>{section.Date}</div>
+    </div>
+    <h2 className={classes.sectionTitle}>{section.Title}</h2>
+    <div className={classes.sectionBody}>
+      {
+        section.Body.map((text, i) => {
+            return <li key={i}>{text}</li>;
+        })
+      }
+    </div>
+    <div className={classes.sectionTags}>
+      Tags: {section.Tags}
+    </div>
+  </div> 
+  );
+};
+const ExperienceSection = injectSheet(styles)(UnstyledExperienceSection);
+
+const UnstyledExperience = (props) => {
+    const {classes} = props;
     return (
       <div className={classes.container}>
         <h1 className={classes.title}>{ExperienceText.Title}</h1>
         <div className={classes.content}>
-          {this.renderSections()}
-        </div>
+        {
+          ExperienceText.Sections.map((section,index) => {
+            return <ExperienceSection section={section} key={index} />
+          })
+        }
       </div>
-    )
-  }
-
-  renderSections() {
-    const {classes} = this.props;
-    let sections = [];
-    for (let section of ExperienceText.Sections) {
-
-      sections.push (
-        <div key={ExperienceText.Sections.indexOf(section)} className={classes.sectionContainer}>
-          <div className={classes.sectionLeftTitle}>
-            <div className={classes.sectionSubtitle}>{section.Subtitle}</div>
-            <div className={classes.sectionDate}>{section.Date}</div>
-          </div>
-          <h2 className={classes.sectionTitle}>{section.Title}</h2>
-          <div className={classes.sectionBody}>
-            {
-              section.Body.map((text, i) => {
-                  return <li key={i}>{text}</li>;
-              })
-            }
-          </div>
-          <div className={classes.sectionTags}>
-            Tags: {section.Tags}
-          </div>
-        </div>
-      );
-
-    }
-    return sections;
-  }
+    </div>
+  );
 };
 
-export const Experience = injectSheet(style)(UnstyledExperience);
+export const Experience = injectSheet(styles)(UnstyledExperience);
