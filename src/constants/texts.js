@@ -1,5 +1,12 @@
 export const MainTitle = `Adam Whitehur.st`;
 
+export const ContactText ={
+  Title: `Contact`,
+  Address: `3514 Vernal Ct. Marced, Ca`,
+  Email: `Adam.Whitehurst@live.com`,
+  Phone: `(209) 829-9295`,
+};
+
 export const ProfileText = {
   Title: `Profile`,
   Body: `Learning how to make computers work is like magic to me. My amazement with video games sparked a desire to make them. As I have matured, so have my interests. I am consumed by the pursuit of refining my coding practices for clarity and efficiency. Nothing satisfies me more than concocting creative solutions to difficult or strange programming problems. User-experience design, the future of Javascript and Python, as well as machine-learning excite me. My goal in life is to continue developing my programming skills and die with a mouse in my hand, if they aren’t deprecated by then.`,
@@ -37,3 +44,24 @@ export const ExperienceText = {
     },
   ]
 };
+
+export const EducationText = {
+  Title: "Education",
+  Sections: [
+    {
+      Title: `UNIVERSITY OF CALIFORNIA, MERCED`,
+      Subtitle: `Bachelor of Science, Computer Science & Engineering`,
+      Date: `FALL 2017 – FALL 2018`,
+    },
+    {
+      Title: `UNIVERSITY OF ALASKA, ANCHORAGE`,
+      Subtitle: `Studied Bachelor of Science, Computer Science`,
+      Date: `FALL 2015 – SPRING 2016`,
+    },
+    {
+      Title: `SAN FRANCISCO STATE UNIVERSITY`,
+      Subtitle: `Studied Bachelor of Science, Computer Science`,
+      Date: `FALL 2014 - SPRING 2015`,
+    },
+  ]
+}
