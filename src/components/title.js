@@ -42,11 +42,13 @@ const style = (theme) => ({
     fontWeight: '100',
     zIndex: 99,
     borderLeft: `0.06em solid ${theme.colorPrimaryLight}`,
+    backgroundColor: `${theme.bgDark}bb`,
   },
     contactTitle: {
     display: 'flex',
     alignSelf: 'flex-start',
     alignItems: 'baseline',
+    color: theme.colorPrimaryLight,
     textShadow: theme.outTextShadow,
     justifyContent: 'flex-end',
     alignContent: 'flex-end',

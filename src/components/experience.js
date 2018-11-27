@@ -1,6 +1,5 @@
 import React from 'react';
 import injectSheet from 'react-jss';
-import {ExperienceText} from '../constants/texts';
 
 const styles = (theme) => ({
   container: {
@@ -11,9 +10,12 @@ const styles = (theme) => ({
     fontFamily: theme.contentFontFamily,
   },
   title: {
-    width: '98%',
+    width: '95%',
     paddingLeft: '0.5em',
-    textAlign: 'start',
+    paddingRight: '1em',
+    textAlign: props => {
+      return props.right ? 'end': 'start';
+    },
     fontFamily: theme.titleFontFamily,
     fontWeight: '100',
     lineHeight: '85%',
@@ -34,10 +36,6 @@ const styles = (theme) => ({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    borderBottom: `0.05em solid ${theme.textLight}`,
-    borderBottomRightRadius: '1%',
-    borderBottomLeftRadius: '1%',
-    boxShadow: theme.outBorderShadow,
   },
   sectionLeftTitle: {
     margin: 0,
@@ -65,15 +63,18 @@ const styles = (theme) => ({
   sectionBody: {
     width: '100%',
     fontSize: '0.9em',
-    padding: '1em',
+    padding: '1em', 
   },
   sectionTags: {
     fontSize: '0.6em',
   },
-  educationContainer: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+  separator: {
+    width: '100%',
+    marginBottom: '1.2rem',
+    borderBottom: `0.05em solid ${theme.textLight}`,
+    borderBottomRightRadius: '1%',
+    borderBottomLeftRadius: '1%',
+    boxShadow: theme.outBorderShadow,
   },
 });
 
@@ -93,23 +94,30 @@ const UnstyledExperienceSection = (props) => {
         })
       }
     </div>
-    <div className={classes.sectionTags}>
-      Tags: {section.Tags}
-    </div>
+    { section.Tags && (
+      <div className={classes.sectionTags}>
+        Tags: {section.Tags}
+      </div>
+    )}
   </div> 
   );
 };
 const ExperienceSection = injectSheet(styles)(UnstyledExperienceSection);
 
 const UnstyledExperience = (props) => {
-    const {classes} = props;
+    const {experience, classes} = props;
     return (
       <div className={classes.container}>
-        <h1 className={classes.title}>{ExperienceText.Title}</h1>
+        <h1 className={classes.title}>{experience.Title}</h1>
         <div className={classes.content}>
         {
-          ExperienceText.Sections.map((section,index) => {
-            return <ExperienceSection section={section} key={index} />
+          experience.Sections.map((section,index) => {
+            return (
+              <>
+              {(index > 0) ? <hr className={classes.separator}/> : ''}
+              <ExperienceSection section={section} key={index} />
+              </>
+            );
           })
         }
       </div>

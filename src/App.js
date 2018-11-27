@@ -4,6 +4,7 @@ import { Carasoul } from './components/carasoul';
 import { Profile } from './components/profile';
 import { Experience } from './components/experience';
 import { Education } from './components/education';
+import { ExperienceText, ProjectText } from './constants/texts';
 import injectSheet from 'react-jss';
 
 
@@ -34,13 +35,31 @@ const style = (theme) => ({
     display: 'flex',
   },
   footer: {
-    position: 'fixed',
-    backgroundColor: theme.bgDark,
+    alignSelf: 'flex-end',
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    alignContent:'center',
     bottom: 0,
     paddingRight: '1rem',
+    textAlign: 'center',
     color: theme.textLight,
     fontFamily: theme.contentFontFamily,
-    textAlign: 'end',
+    fontSize: '0.5em',
+
+    '& a': {
+      display: 'flex',
+      flexDirection: 'row',
+      margin: '0.8em',
+      color: theme.colorPrimaryLight,
+      textDecoration: 'none',
+      textShadow: theme.outTextShadow,
+      '& em': {
+        fontSize: '2.2em',
+        paddingTop: '0.25rem',
+        paddingRight: '0.5rem',
+      }
+
+    },
   }
 });
 
@@ -52,20 +71,28 @@ class UnstyledApp extends React.Component {
       <div className={classes.container}>
         <Title />
         <Carasoul/>
+
         <div className={classes.content}>
           <div className={classes.profileContainer}>
             <Profile/>
             <Education/>
           </div>
-          <Experience/>
+          <Experience experience={ExperienceText} left/>
+          <Experience experience={ProjectText} right/> 
           {/*
-          // TODO: Projects <br/>
+          // TODO: PICTURE!!
+          // TODO: Skills
+          // TODO: Languages
           // TODO: Awards <br/>
-          // TODO: Contact <br/>
           */}
         </div>
+
+
         <div className={classes.footer}>
-          <p> Made with three simple ingredients: ♡ , ⚛ , and ♫</p>
+        <a href={'https://github.com/AdamWhitehurst/portfolio/'}>
+          <em>♫ + ⚛ = ♡  | </em>
+          <p> Click for source<br/>(it's pretty neat)</p>
+        </a>
         </div>
       </div>
     );
