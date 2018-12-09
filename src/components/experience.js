@@ -113,10 +113,10 @@ const UnstyledExperience = (props) => {
         {
           experience.Sections.map((section,index) => {
             return (
-              <>
+              <div key={index}>
               {(index > 0) ? <hr className={classes.separator}/> : ''}
-              <ExperienceSection section={section} key={index} />
-              </>
+              <ExperienceSection section={section} />
+              </div>
             );
           })
         }
