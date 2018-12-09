@@ -14,13 +14,13 @@ export const Links = [
     icon: "facebook-f",
   },
   {
-    url: "https://twitter.com/AdamBrohurst",
-    icon: "twitter",
+    url: "https://leetcode.com/adamwhitehurst/",
+    icon: "code",
   },
-  {
-    url: "https://www.instagram.com/witty.horse/",
-    icon: 'instagram',
-  },
+  // {
+  //   url: "https://www.instagram.com/witty.horse/",
+  //   icon: 'instagram',
+  // },
   {
     url: "https://gitlab.com/AdamWhitehurst",
     icon: 'gitlab',

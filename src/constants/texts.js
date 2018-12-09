@@ -1,4 +1,3 @@
-import React from 'react';
 export const MainTitle = `Adam Whitehur.st`;
 
 export const ContactText ={
